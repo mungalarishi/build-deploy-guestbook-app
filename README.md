@@ -50,7 +50,7 @@ Then with OpenShift Console, we create a Container Image from our internal regis
 <img width="951" alt="openshiftautoscale" src="https://user-images.githubusercontent.com/97641116/196009890-07c21402-f4ba-43cb-a124-ae80b2be390b.PNG">
 
 This is the link found at the bottom of the resources tab for our deployed application:
-http://build-deploy-guestbook-app-sn-labs-munagalarish.labs-prod-openshift-san-a45631dc5778dc6371c67d206ba9ae5c-0000.us-east.containers.appdomain.cloud
+http://build-deploy-guestbook-app1-sn-labs-munagalarish.labs-prod-openshift-san-a45631dc5778dc6371c67d206ba9ae5c-0000.us-east.containers.appdomain.cloud/
 
 Now when we make changes and use docker to build and push the app, Openshift will regualarly import the new images pushed.
 
@@ -58,7 +58,7 @@ Now when we make changes and use docker to build and push the app, Openshift wil
 
 # Deploy Redis master and slave:
 
-We now delpoy the Redis master for storage and Redis slaves for transfering the data. This can help preserve the data even when new images are delployed.
+We now delpoy the Redis master for storage and Redis slaves for transfering the data. This can help preserve the data even when new updates are rolled out keeping persistent storage.
 
 With these set of commands:
 `oc apply -f redis-master-deployment.yaml`
@@ -70,6 +70,6 @@ We can deploy Redis slave and master as shown in our Topology:
 
 <img width="957" alt="redis" src="https://user-images.githubusercontent.com/97641116/196010074-439c7024-7566-4975-b8af-58a971f82756.PNG">
 
-Finally we deploy the guestbook app using OpenShift with the Dockerfile from the repository. Now the app is no longer depended on usiing in-memory datastore and can preserve the data.
+Finally we deploy the guestbook app using OpenShift with the Dockerfile from the repository. Now the app is no longer depended on using in-memory datastore and can preserve the data.
 
 <img width="960" alt="deployedfromgithub" src="https://user-images.githubusercontent.com/97641116/196010118-59999fac-6f90-4069-b98b-cce5cf054970.PNG">
