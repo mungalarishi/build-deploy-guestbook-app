@@ -37,7 +37,7 @@ We can see the number of pods increasing in real time as the app passes the thre
 
 <img width="483" alt="hpa2" src="https://user-images.githubusercontent.com/97641116/196009704-91835c56-97b3-4f65-9020-c6c0a87ac421.PNG">
 
-# Delpoy Guestbook App with Openshift Internal Registry:
+# Deploy Guestbook App with Openshift Internal Registry:
 
 This implementation had thwe goal of reducing latency when scanning and pulling images. 
 
